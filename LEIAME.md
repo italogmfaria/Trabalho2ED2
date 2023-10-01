@@ -1,0 +1,3 @@
+Nosso projeto consiste no seguinte...
+
+O arquivo LEIAME deve ser escrito em fonte ARIAL e tamanho 12, deve possuir um cabeçalho que identifique a disciplina, os alunos do grupo, a atividade resolvida, como utilizar o sistema (bem detalhado, inclusive como executar), possíveis problemas do sistema e requisitos mínimos.

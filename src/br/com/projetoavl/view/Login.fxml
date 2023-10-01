@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.schoolconnect.projeto.controller.ControllerInterfaceLogin">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane fx:id="panel" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #2C3333; -fx-border-color: #222626; -fx-border-width: 3px;">
+               <children>
+                  <Button fx:id="voltaInicio" layoutX="195.0" layoutY="310.0" mnemonicParsing="false" onAction="#voltaInicio" prefHeight="34.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: #3FB553;" text="VOLTAR" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="71.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="267.0" fitWidth="271.0" layoutX="202.0" layoutY="-80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logowhite.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="299.0" layoutY="97.0" prefHeight="34.0" prefWidth="74.0" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Regular" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="matricula" layoutX="189.0" layoutY="180.0" prefHeight="34.0" prefWidth="292.0" promptText="Matricula" style="-fx-background-color: #E9F8F9; -fx-background-radius: 10; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: gray;" />
+                  <PasswordField fx:id="password" layoutX="189.0" layoutY="234.0" prefHeight="34.0" prefWidth="292.0" promptText="Senha" style="-fx-background-color: #E9F8F9; -fx-background-radius: 10; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: gray;" />
+                  <Button fx:id="entrar" layoutX="344.0" layoutY="310.0" mnemonicParsing="false" onAction="#entrar" prefHeight="34.0" prefWidth="125.0" style="-fx-background-radius: 20; -fx-background-color: #3FB553;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
