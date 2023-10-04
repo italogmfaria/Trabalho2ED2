@@ -1,4 +1,4 @@
-package br.com.schoolconnect.projeto.controller;
+package br.com.projetoavl.controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
