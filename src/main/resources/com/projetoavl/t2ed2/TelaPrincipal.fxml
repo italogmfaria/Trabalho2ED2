@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.projetoavl.t2ed2.view.TelaPrincipal"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="153.0" style="-fx-background-color: #528cff; -fx-border-color: black; -fx-border-width: 2;">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/com/projetoavl/t2ed2/img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="2.0" layoutY="151.0" text="Inserir" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="187.0" text="Remover" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="223.0" text="Buscar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="259.0" text="Ordenar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="363.0" text="Sair" textFill="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="81.0" prefHeight="41.0" prefWidth="126.0" text="Projeto 2ED2" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="152.0" prefHeight="400.0" prefWidth="448.0" style="-fx-background-color: #fcbb44; -fx-border-color: black; -fx-border-width: 2;">
+               <children>
+                  <Label layoutX="149.0" layoutY="26.0" text="Projeto AVL" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
