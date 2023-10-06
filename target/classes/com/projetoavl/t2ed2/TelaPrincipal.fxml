@@ -20,9 +20,9 @@
          <children>
             <Pane layoutX="152.0" prefHeight="400.0" prefWidth="458.0" style="-fx-background-color: #fcbb44; -fx-border-color: black; -fx-border-width: 2;">
                <children>
-                  <ImageView fitHeight="382.0" fitWidth="469.0" layoutX="35.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="swing" fitHeight="382.0" fitWidth="469.0" layoutX="35.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" styleClass="src/main/java/style/swing.css">
                      <image>
-                        <Image url="@../../../../java/com/projetoavl/t2ed2/img/welcome.png" />
+                        <Image url="@img/welcome.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="125.0" layoutY="33.0" text="TRABALHO 2ED2">
@@ -111,7 +111,7 @@
                <children>
                   <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../java/com/projetoavl/t2ed2/img/logo.png" />
+                        <Image url="@img/logo.png" />
                      </image>
                   </ImageView>
                   <Label fx:id="lblInserir" layoutX="2.0" layoutY="151.0" text="Inserir" textFill="WHITE">
