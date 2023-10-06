@@ -62,5 +62,4 @@ public class TelaPrincipal extends Application {
     public static Scene getScene(){
         return scene;
     }
-
 }
