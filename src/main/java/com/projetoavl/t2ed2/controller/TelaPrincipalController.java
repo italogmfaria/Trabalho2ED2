@@ -21,8 +21,12 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Duration;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -88,7 +92,49 @@ public class TelaPrincipalController implements Initializable {
     private TextField txtNota3;
 
     @FXML
+    private TableView tableRemover;
+
+    @FXML
+    private TableView tableBuscar;
+
+    @FXML
+    private TableView tableImprimir;
+
+    @FXML
     private ImageView welcome;
+
+    //Metodo pra salvar os dados no txt
+    @FXML
+    void inserirDados(ActionEvent event) {
+
+        String matricula = txtMatricula.getText();
+        String nome = txtNome.getText();
+        String nota1 = txtNota1.getText();
+        String nota2 = txtNota2.getText();
+        String nota3 = txtNota3.getText();
+        String faltas = txtFaltas.getText();
+
+        String dados = matricula + ", " + nome + ", " + faltas + ", " + nota1 +
+                ", " + nota2 + ", " + nota3;
+
+        // Eu tive problema em settar o caminho do arvivo, testa aí no seu.
+        String arquivoSaida = "src\\main\\java\\com\\projetoavl\\t2ed2\\saida.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoSaida, true))) {
+            writer.write(dados);
+            writer.newLine(); // Esse aqui faz ir pra proxima linha, mas ele pula linha vazia se algum dado for apagado.
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Aqui é só pra limpar os campos de textos depois, se não quiser pode tirar.
+        txtMatricula.clear();
+        txtNome.clear();
+        txtNota1.clear();
+        txtNota2.clear();
+        txtNota3.clear();
+        txtFaltas.clear();
+    }
 
     // Sair do programa e salvar as alterações
     @FXML
@@ -99,30 +145,34 @@ public class TelaPrincipalController implements Initializable {
 
 
     // Problema: necessita fazer um button para fechar cada panel
+    // Fiz o panel que for clicado deixar todos os outros panels invisiveis.
+    // Adicionei esse "Map" pra conseguir definir qual é o panel e o label.
     @FXML
     void telaClicada(MouseEvent event) {
         Label labelClicado = (Label) event.getSource();
         Pane panelClicado = null;
 
-        if (labelClicado == lblInserir) {
-            panelClicado = inserirPanel;
-        } else if (labelClicado == lblRemover) {
-            panelClicado = removerPanel;
-        } else if (labelClicado == lblBuscar) {
-            panelClicado = buscaPanel;
-        } else if (labelClicado == lblImprimir) {
-            panelClicado = imprimirPanel;
-        }
+        Map<Label, Pane> labelToPanelMap = new HashMap<>();
+        labelToPanelMap.put(lblInserir, inserirPanel);
+        labelToPanelMap.put(lblRemover, removerPanel);
+        labelToPanelMap.put(lblBuscar, buscaPanel);
+        labelToPanelMap.put(lblImprimir, imprimirPanel);
 
-        if (panelClicado != null) {
-            panelClicado.setVisible(!panelClicado.isVisible());
+        for (Label label : labelToPanelMap.keySet()) {
+            Pane panel = labelToPanelMap.get(label);
+            if (label == labelClicado) {
+                panelClicado = panel;
+                panel.setVisible(true);
+            } else {
+                panel.setVisible(false);
+            }
         }
     }
 
 
     // Animações
     @Override
-        public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
         inserirPanel.setVisible(false);
         removerPanel.setVisible(false);
@@ -136,7 +186,8 @@ public class TelaPrincipalController implements Initializable {
         timeline.setAutoReverse(true);
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
-        }
+    }
+
     @FXML
     private void labelMousePressed(MouseEvent event) {
         Label label = (Label) event.getSource();
@@ -153,4 +204,4 @@ public class TelaPrincipalController implements Initializable {
         transition.play();
     }
 
-    }
+}

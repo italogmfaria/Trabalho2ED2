@@ -1,0 +1,28 @@
+Faltas: Mais de 8000
+Matrícula: 23
+Nome: Brenis
+Nota 1: 7
+Nota 2: 5
+Nota 3: 6
+------------------------
+Faltas: Mais de 8000
+Matrícula: 23
+Nome: Brenis
+Nota 1: 7
+Nota 2: 5
+Nota 3: 6
+------------------------
+Faltas: 312321
+Matrícula: 123
+Nome: 1231233
+Nota 1: 1231231
+Nota 2: 312312
+Nota 3: 312321
+------------------------
+Matrícula: 23
+Nome: brenis
+Nota 1: 7
+Nota 2: 7
+Nota 3: 7
+Faltas: 8000
+
