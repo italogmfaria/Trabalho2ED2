@@ -1,40 +1,23 @@
-.swing{
-    animation: swing ease-in-out 1s infinite alternate;
-    transform-origin: center -20px;
-    box-shadow: 5px 5px 10px rgba(0, 0 ,0 , 0.5);
+.btnInicio {
+    -fx-background-color: linear-gradient(to bottom, #004eb5 5%, #4a5ee0 100%), #004eb5;
+    -fx-background-radius: 24px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #27387e;
+    -fx-border-width: 3px;
+    -fx-box-shadow: 3px 3px 2px 2px #27387e;
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 20px;
+    -fx-text-decoration: none;
 }
 
-.swing::after{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid white;
-    top: -10px;
-    left: 50%;
-    z-index: 0;
-    border-bottom: none;
-    border-right: none;
-    transform: rotate(45deg);
+.btnInicio:hover {
+    -fx-background-color: linear-gradient(to bottom, #4a5ee0 5%, #004eb5 100%), #4a5ee0;
 }
 
-.swing::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top: -14px;
-    left: 55%;
-    z-index: 5;
-    border-radius: 50% 50%;
-}
-
-@keyframes swing {
-    0%{
-        transform: rotate(4deg);
-    }
-
-    100%{
-        transform: rotate(-4deg);
-    }
+.btnInicio:pressed {
+    -fx-translate-y: 1px;
 }
