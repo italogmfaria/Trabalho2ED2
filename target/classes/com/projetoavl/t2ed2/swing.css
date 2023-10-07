@@ -1,0 +1,22 @@
+.btnInicio {
+    -fx-background-color: linear-gradient(to bottom, #004eb5 5%, #4a5ee0 100%), #004eb5;
+    -fx-background-radius: 24px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #27387e;
+    -fx-border-width: 3px;
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Arial;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 20px;
+    -fx-text-decoration: none;
+}
+
+.btnInicio:hover {
+    -fx-background-color: linear-gradient(to bottom, #4a5ee0 5%, #004eb5 100%), #4a5ee0;
+}
+
+.btnInicio:pressed {
+    -fx-translate-y: 1px;
+}

@@ -10,7 +10,7 @@ public class Main {
         ArvoreAVL arvore = new ArvoreAVL();
         Scanner scanner = new Scanner(System.in);
         // Ler dados do arquivo "entrada.txt" e inserir na árvore
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/br/com/projetoavl/txt/entrada.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/com/projetoavl/t2ed2/entrada.txt"))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(",");
@@ -46,6 +46,12 @@ public class Main {
                     // Inserir aluno
                     System.out.print("Digite a matrícula do aluno: ");
                     int matricula = scanner.nextInt();
+
+                    if (arvore.buscar(matricula) != null) {
+                        System.out.println("\nMatrícula já existe. Não é possível inserir aluno com a mesma matrícula.\n");
+                        break;
+                    }
+
                     scanner.nextLine(); // Consumir a quebra de linha
                     System.out.print("Digite o nome do aluno: ");
                     String nome = scanner.nextLine();
@@ -87,7 +93,7 @@ public class Main {
                     break;
                 case 5:
                     // Encerrar programa e gravar em arquivo
-                    arvore.gravarEmArquivo("src/br/com/projetoavl/txt/saida.txt");
+                    arvore.gravarEmArquivo("src/main/java/com/projetoavl/t2ed2/saida.txt");
                     System.out.println("Dados gravados em 'saida.txt'. Encerrando o programa.");
                     return;
                 default:
