@@ -3,21 +3,11 @@ package com.projetoavl.t2ed2.model;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-
-class No {
-    public Aluno aluno;
-    public No esquerda;
-    public No direita;
-    public int altura;
-
-    public No(Aluno aluno) {
-        this.aluno = aluno;
-        this.altura = 1;
-    }
-}
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArvoreAVL {
-    private No raiz;
+    private static No raiz;
 
     // Construtor
     public ArvoreAVL() {
@@ -25,26 +15,26 @@ public class ArvoreAVL {
     }
 
     // Método para calcular a altura de um nó
-    private int altura(No no) {
+    private static int altura(No no) {
         if (no == null)
             return 0;
         return no.altura;
     }
 
     // Método para calcular o fator de balanceamento de um nó
-    private int fatorBalanceamento(No no) {
+    private static int fatorBalanceamento(No no) {
         if (no == null)
             return 0;
         return altura(no.esquerda) - altura(no.direita);
     }
 
     // Método para atualizar a altura de um nó
-    private void atualizarAltura(No no) {
+    private static void atualizarAltura(No no) {
         no.altura = Math.max(altura(no.esquerda), altura(no.direita)) + 1;
     }
 
     // Método para realizar a rotação à direita
-    private No rotacaoDireita(No y) {
+    private static No rotacaoDireita(No y) {
         No x = y.esquerda;
         No T2 = x.direita;
 
@@ -60,7 +50,7 @@ public class ArvoreAVL {
     }
 
     // Método para realizar a rotação à esquerda
-    private No rotacaoEsquerda(No x) {
+    private static No rotacaoEsquerda(No x) {
         No y = x.direita;
         No T2 = y.esquerda;
 
@@ -119,11 +109,11 @@ public class ArvoreAVL {
     }
 
     // Método para remover um aluno da árvore AVL
-    public void remover(int matricula) {
+    public static void remover(int matricula) {
         raiz = removerRec(raiz, matricula);
     }
 
-    private No removerRec(No no, int matricula) {
+    private static No removerRec(No no, int matricula) {
         if (no == null)
             return no;
 
@@ -145,7 +135,7 @@ public class ArvoreAVL {
                 } else
                     no = temp;
             } else {
-                No temp = minValueNode(no.direita);
+                No temp = minValorNode(no.direita);
                 no.aluno = temp.aluno;
                 no.direita = removerRec(no.direita, temp.aluno.getMatricula());
             }
@@ -179,7 +169,7 @@ public class ArvoreAVL {
         return no;
     }
 
-    private No minValueNode(No node) {
+    private static No minValorNode(No node) {
         No current = node;
         while (current.esquerda != null)
             current = current.esquerda;
@@ -187,11 +177,11 @@ public class ArvoreAVL {
     }
 
     // Método para buscar um aluno por matrícula
-    public Aluno buscar(int matricula) {
+    public static Aluno buscar(int matricula) {
         return buscarRec(raiz, matricula);
     }
 
-    private Aluno buscarRec(No no, int matricula) {
+    private static Aluno buscarRec(No no, int matricula) {
         if (no == null)
             return null;
 
@@ -214,6 +204,21 @@ public class ArvoreAVL {
             imprimirEmOrdemRec(no.esquerda);
             System.out.println(no.aluno.toString());
             imprimirEmOrdemRec(no.direita);
+        }
+    }
+
+    // Método para imprimir todos os alunos em ordem de matrícula para o FXML
+    public static List<Aluno> obterTodosAlunosEmOrdem() {
+        List<Aluno> listaAlunos = new ArrayList<>();
+        obterTodosAlunosEmOrdemRec(raiz, listaAlunos);
+        return listaAlunos;
+    }
+
+    private static void obterTodosAlunosEmOrdemRec(No no, List<Aluno> listaAlunos) {
+        if (no != null) {
+            obterTodosAlunosEmOrdemRec(no.esquerda, listaAlunos);
+            listaAlunos.add(no.aluno);
+            obterTodosAlunosEmOrdemRec(no.direita, listaAlunos);
         }
     }
 

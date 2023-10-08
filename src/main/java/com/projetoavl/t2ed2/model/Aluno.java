@@ -1,5 +1,8 @@
 package com.projetoavl.t2ed2.model;
-class Aluno {
+
+import java.text.DecimalFormat;
+
+public class Aluno {
     private int matricula;
     private String nome;
     private int faltas;
@@ -56,6 +59,10 @@ class Aluno {
 
     @Override
     public String toString() {
-        return "Matrícula: " + matricula + ", Nome: " + nome + ", Faltas: " + faltas + ", Nota1: " + nota1 + ", Nota2: " + nota2 + ", Nota3: " + nota3 + ", Média: " + media;
+        DecimalFormat df = new DecimalFormat("#0.00");
+        return "Matrícula: " + matricula + ", Nome: " + nome + ", Faltas: " + faltas +
+                ", Nota1: " + nota1 + ", Nota2: " + nota2 + ", Nota3: " + nota3 +
+                ", Média: " + df.format(media);
     }
+
 }

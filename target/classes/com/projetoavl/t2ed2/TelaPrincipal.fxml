@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
    <children>
       <Label layoutX="324.0" layoutY="27.0" text="TRABALHO 2ED2" underline="true">
          <font>
@@ -111,63 +111,75 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="inserirPanel" layoutX="172.0" layoutY="85.0" prefHeight="366.0" prefWidth="564.0" style="-fx-background-color: #ff7b0e;">
+      <Pane fx:id="inserirPanel" layoutX="173.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <TextField fx:id="txtMatricula" layoutX="74.0" layoutY="65.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="321.0" layoutY="46.0" text="Nome:">
+            <TextField fx:id="txtNota2" layoutX="59.0" layoutY="260.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="328.0" layoutY="241.0" text="Terceira nota:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtNome" layoutX="321.0" layoutY="65.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="74.0" layoutY="46.0" text="Matrícula:">
+            <TextField fx:id="txtNota3" layoutX="328.0" layoutY="260.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="59.0" layoutY="241.0" text="Segunda nota:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtFaltas" layoutX="74.0" layoutY="139.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="321.0" layoutY="120.0" text="Primeira nota:">
+            <Button fx:id="btnInserir" layoutX="439.0" layoutY="322.0" mnemonicParsing="false" onAction="#inserirAluno" text="INSERIR" />
+            <TextField fx:id="txtFaltas" layoutX="60.0" layoutY="168.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="329.0" layoutY="149.0" text="Primeira nota:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtNota1" layoutX="321.0" layoutY="139.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="74.0" layoutY="120.0" text="Número de faltas:">
+            <TextField fx:id="txtNota1" layoutX="329.0" layoutY="168.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="60.0" layoutY="149.0" text="Número de faltas:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtNota2" layoutX="74.0" layoutY="217.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="321.0" layoutY="198.0" text="Terceira nota:">
+            <TextField fx:id="txtMatricula" layoutX="61.0" layoutY="76.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="330.0" layoutY="57.0" text="Nome:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtNota3" layoutX="321.0" layoutY="217.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="74.0" layoutY="198.0" text="Segunda nota:">
+            <TextField fx:id="txtNome" layoutX="330.0" layoutY="76.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="61.0" layoutY="57.0" text="Matrícula:">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnInserir" layoutX="426.0" layoutY="267.0" mnemonicParsing="false" onAction="#inserirDados" text="INSERIR" />
          </children>
       </Pane>
-      <Pane fx:id="removerPanel" layoutX="172.0" layoutY="85.0" prefHeight="366.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e;" visible="false">
+      <Pane fx:id="removerPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <Button fx:id="btnRemover" layoutX="456.0" layoutY="312.0" mnemonicParsing="false" text="REMOVER" />
-            <TableView layoutX="39.0" layoutY="27.0" prefHeight="268.0" prefWidth="487.0" />
+            <Button fx:id="btnRemover" layoutX="470.0" layoutY="335.0" mnemonicParsing="false" onAction="#removerAluno" text="REMOVER" />
+            <TableView fx:id="tableRemoverAluno" layoutX="28.0" layoutY="72.0" prefHeight="244.0" prefWidth="512.0" />
+            <TextField fx:id="txtMatriculaRemover" layoutX="29.0" layoutY="35.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane fx:id="buscaPanel" layoutX="172.0" layoutY="85.0" prefHeight="366.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e;" visible="false">
+      <Pane fx:id="buscaPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <TableView fx:id="tableBuscar" layoutX="39.0" layoutY="25.0" prefHeight="268.0" prefWidth="487.0" />
-            <Button fx:id="btnBuscar" layoutX="466.0" layoutY="314.0" mnemonicParsing="false" text="BUSCAR" />
+            <Button fx:id="btnBuscar" layoutX="470.0" layoutY="335.0" mnemonicParsing="false" onAction="#buscarAluno" prefHeight="25.0" prefWidth="70.0" text="BUSCAR" />
+            <TableView fx:id="tableBuscarAluno" layoutX="28.0" layoutY="72.0" prefHeight="244.0" prefWidth="512.0" />
+            <TextField fx:id="txtMatriculaBusca" layoutX="29.0" layoutY="35.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane fx:id="imprimirPanel" layoutX="172.0" layoutY="85.0" prefHeight="366.0" prefWidth="564.0" style="-fx-background-color: #ff7b0e;" visible="false">
+      <Pane fx:id="imprimirPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;">
          <children>
-            <TableView fx:id="tableImprimir" layoutX="39.0" layoutY="30.0" prefHeight="268.0" prefWidth="487.0" />
-            <Button fx:id="btnImprimir" layoutX="457.0" layoutY="318.0" mnemonicParsing="false" text="IMPRIMIR" />
+            <Button fx:id="btnImprimir" layoutX="476.0" layoutY="335.0" mnemonicParsing="false" onAction="#imprimirAlunos" text="IMPRIMIR" />
+            <TableView fx:id="tableImprimirAluno" layoutX="18.0" layoutY="24.0" prefHeight="292.0" prefWidth="527.0" />
          </children>
       </Pane>
    </children>
