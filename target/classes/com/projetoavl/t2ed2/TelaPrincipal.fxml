@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="mainTela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
+<Pane fx:id="mainTela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
    <children>
       <Label layoutX="324.0" layoutY="27.0" text="TRABALHO 2ED2" underline="true">
          <font>

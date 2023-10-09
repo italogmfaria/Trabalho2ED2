@@ -1,39 +1,66 @@
+# Instituto Federal Goiano Campus Urutaí
+## Bacharelado em Sistemas de Informação
 
-IF Goiano Campus Urutaí -
-Estrutura de dados 2 (4º Periodo)
+**Disciplina**: Estrutura de Dados 2 - (4º Semestre)
 
-Alunos: Breno Reis e Ítalo Gonçalves
+**Alunos**:
+- Breno Reis de Oliveira
+- Ítalo Gonçalves Meireles Faria
 
-Trabalho 2ED2
+## Trabalho 2ED2
 
-Para utilizar o sistema deve ser extraído o arquivo zip. O projeto foi feito utilizando o IntelliJ e deve se executado utilizando o mesmo.
-Basta fazer a instalação da IDE pelo site oficial e abrir a ferramenta após a instalação.
-Depois de aberto, clique em abrir um novo projeto e selecione a pasta com a aplicação extraída. 
+Este arquivo contém informações para compreender e utilizar o sistema desenvolvido como Trabalho 2 da disciplina de Estrutura de Dados 2. Por favor, leia-o atentamente antes de prosseguir.
 
-Para executar o programa execute a clase TelaInicial, que está presente em "src/main/java/com.projetoavl.t2ed2/view".
-Após a execução do programa está na hora de testar as funções, que são:
+### Como Utilizar o Sistema
 
--> Inserção de alunos.
+1. **Extração do Arquivo Zip:**
+    - Faça o download do arquivo zip do projeto.
+    - Extraia o conteúdo do arquivo zip em uma pasta de sua escolha.
 
-    Preencha os campos da tela de inserção e clique no botão inserir.
 
--> Remoção de alunos.
+2. **Instalação da IDE IntelliJ:**
+    - Para garantir a correta execução da aplicação, é recomendável que você utilize a IDE IntelliJ.
+    - Você pode baixar a IDE IntelliJ no site oficial: [Download IntelliJ](https://www.jetbrains.com/pt-br/idea/download/?section=windows).
 
-    Podem ser removidos via matricula ou selecionando o aluno direto na tabela.
 
--> Buscar alunos.
+3. **Abertura do Projeto no IntelliJ:**
+    - Abra a IDE IntelliJ após a instalação.
+    - Clique em "Abrir um novo projeto".
+    - Selecione a pasta com a aplicação extraída.
 
-    É feita a busca utilizando a matrícula do aluno em questão.
 
--> Imprimir lista de alunos.
+4. **Execução do Programa:**
+    - Para executar o programa, vá até a classe `TelaInicial`, localizada em "src/main/java/com.projetoavl.t2ed2/view".
+    - Execute a classe `TelaInicial`.
 
-    Basta clicar no botão "Imprimir" para gerar a tabela de alunos, organizados por matrícula.
 
-A partir deste ponto acreditamos que seja uma aplicação intuitiva e de fácil utilização.
+5. **Funcionalidades Disponíveis:**
+    - O sistema oferece as seguintes funcionalidades:
+   
+        - **Inserção de Alunos:**
+          >Preencha os campos na tela de inserção.
+          Clique no botão "Inserir" para adicionar um aluno.
 
-Não há problemas observáveis na aplicação quando se utiliza o IntelliJ,
-por isso pedimos que seja a IDE usada para testa-la.
+        - **Remoção de Alunos:**
+          >Você pode remover alunos através de suas matrículas ou selecionando um aluno diretamente na tabela.
+          Para remover, basta clicar no botão "Remover".
 
-A aplicação pode ser rodada sem muitos problemas e não é muito pesada, visto que é um programa pequeno e leve.
+        - **Buscar Alunos:**
+          >Realize a busca de um aluno utilizando a matrícula desejada.
+          Clique no botão "Buscar" após inserir a matrícula.
 
-Link da IDE: https://www.jetbrains.com/pt-br/idea/download/?section=windows
+        - **Imprimir Lista de Alunos:**
+          >Para gerar uma tabela organizada por matrícula, clique no botão "Imprimir".
+
+### Possíveis Problemas
+
+- A aplicação foi projetada para ser utilizada com a IDE IntelliJ e não foram observados problemas observáveis durante o desenvolvimento e teste usando essa IDE.
+
+### Requisitos Mínimos
+
+- Não há requisitos específicos de hardware para rodar esta aplicação, pois é leve e de tamanho pequeno.
+- É necessário ter a IDE IntelliJ instalada para a execução correta da aplicação.
+
+Para qualquer dúvida ou problema, sinta-se à vontade para entrar em contato com a gente ou consultar o [repositório no GitHub](https://github.com/italogmfaria/Trabalho2ED2) para caso queira informações adicionais, como commits e desenvolvimento de cada aluno no trabalho.
+
+Desde já, agradecemos pela compreensão!
