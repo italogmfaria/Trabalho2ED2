@@ -99,9 +99,9 @@
                   <Font name="SansSerif Bold" size="18.0" />
                </font>
             </Label>
-            <Label contentDisplay="CENTER" layoutX="40.0" layoutY="19.0" prefHeight="53.0" prefWidth="91.0" text="ÁRVORE&#10;AVL" textAlignment="CENTER" textFill="WHITE">
+            <Label contentDisplay="CENTER" layoutX="34.0" layoutY="14.0" prefHeight="53.0" prefWidth="91.0" text="ÁRVORE&#10;AVL" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="Rockwell" size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
          </children>
@@ -150,7 +150,7 @@
       <Pane fx:id="removerPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #3448a5; -fx-background-radius: 10; -fx-border-color: #ff7b0e; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
             <Button fx:id="btnRemover" layoutX="423.0" layoutY="335.0" mnemonicParsing="false" onAction="#removerAluno" styleClass="btnInicio" stylesheets="@swing.css" text="REMOVER" />
-            <TableView fx:id="tableRemoverAluno" layoutX="28.0" layoutY="72.0" prefHeight="244.0" prefWidth="512.0" />
+            <TableView fx:id="tableRemoverAluno" layoutX="28.0" layoutY="72.0" onMouseClicked="#getAluno" prefHeight="244.0" prefWidth="512.0" />
             <TextField fx:id="txtMatriculaRemover" layoutX="29.0" layoutY="35.0" prefHeight="25.0" prefWidth="169.0" />
             <Label layoutX="29.0" layoutY="16.0" text="Matrícula:" textFill="WHITE">
                <font>

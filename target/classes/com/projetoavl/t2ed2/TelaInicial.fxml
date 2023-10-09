@@ -19,7 +19,7 @@
                         <Font name="Yu Gothic Medium" size="36.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endY="1.0">
+                        <LinearGradient endX="0.08530805687203792" endY="1.0" startX="0.08530805687203792" startY="0.22748815165876776">
                            <stops>
                               <Stop>
                                  <color>

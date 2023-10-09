@@ -222,18 +222,29 @@ public class TelaPrincipalController implements Initializable {
         exibirSucesso("Aluno inserido com sucesso!");
     }
 
+    private Aluno aluno;
+    @FXML
+    void getAluno(){
+        aluno = tableRemoverAluno.getSelectionModel().getSelectedItem();
+    }
+
     // Método para remover aluno
     @FXML
     void removerAluno(ActionEvent event) {
-        String matriculaRemoverStr = txtMatriculaRemover.getText().trim();
+        String matriculaRemoverStr = txtMatriculaRemover.getText();
+        if(aluno != null) {
+            matriculaRemoverStr = aluno.getMatricula() + "";
+            aluno = null;
+        }
+
+
 
         // Verifica se o campo de matrícula está vazio
         if (matriculaRemoverStr.isEmpty()) {
             exibirErro("Campo de matrícula vazio!");
             return;
         }
-
-        int matriculaRemover = Integer.parseInt(txtMatriculaRemover.getText());
+        int matriculaRemover = Integer.parseInt(matriculaRemoverStr);
         arvore.remover(matriculaRemover);
         txtMatriculaRemover.clear();
         List<Aluno> alunoList = arvore.obterTodosAlunosEmOrdem();
