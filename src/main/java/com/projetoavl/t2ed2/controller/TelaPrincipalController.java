@@ -32,18 +32,6 @@ public class TelaPrincipalController implements Initializable {
     private Pane painelAberto = null;
 
     @FXML
-    private Button btnBuscar;
-
-    @FXML
-    private Button btnImprimir;
-
-    @FXML
-    private Button btnInserir;
-
-    @FXML
-    private Button btnRemover;
-
-    @FXML
     private Pane buscaPanel;
 
     @FXML
@@ -279,6 +267,13 @@ public class TelaPrincipalController implements Initializable {
     public void imprimirAlunos() {
         List<Aluno> alunoList = arvore.obterTodosAlunosEmOrdem();
         carregaTabela(tableImprimirAluno, FXCollections.observableArrayList(alunoList));
+    }
+
+    //Imprimir os alunos na tela de Remoção para ficar mais fácil de saber a matricula.
+    @FXML
+    public void imprimirAlunos2() {
+        List<Aluno> alunoList = arvore.obterTodosAlunosEmOrdem();
+        carregaTabela(tableRemoverAluno, FXCollections.observableArrayList(alunoList));
     }
 
     // Encerra o programa e salva as alterações na árvore

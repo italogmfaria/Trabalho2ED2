@@ -54,15 +54,15 @@ public class Aluno {
 
     // Método para calcular a média
     private double calcularMedia() {
-        return nota1 * 0.2 + nota2 * 0.35 + nota3 * 0.45;
+        DecimalFormat df = new DecimalFormat("#0.00");
+        return Double.parseDouble(df.format((nota1 * 0.2) + (nota2 * 0.35) + (nota3 * 0.45)).replaceAll(",","."));
     }
 
     @Override
     public String toString() {
-        DecimalFormat df = new DecimalFormat("#0.00");
         return "Matrícula: " + matricula + ", Nome: " + nome + ", Faltas: " + faltas +
                 ", Nota1: " + nota1 + ", Nota2: " + nota2 + ", Nota3: " + nota3 +
-                ", Média: " + df.format(media);
+                ", Média: " + media;
     }
 
 }

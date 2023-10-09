@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
+<Pane fx:id="mainTela" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="750.0" style="-fx-border-color: #28387f; -fx-border-width: 3; -fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3448a5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaPrincipalController">
    <children>
       <Label layoutX="324.0" layoutY="27.0" text="TRABALHO 2ED2" underline="true">
          <font>
@@ -46,22 +45,18 @@
          <children>
             <Pane layoutX="7.0" layoutY="86.0" prefHeight="390.0" prefWidth="145.0" style="-fx-background-color: rgb(50, 65, 170); -fx-background-radius: 3; -fx-border-color: #ff7b0e; -fx-border-width: 3; -fx-border-radius: 3;">
                <children>
-                  <Label fx:id="lblInserir" layoutX="1.0" layoutY="54.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="132.0" text="➪ Inserção" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="lblInserir" layoutX="1.0" layoutY="54.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="132.0" styleClass="label-hover" stylesheets="@swing.css" text="➪ Inserção" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Bold" size="18.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
                      </padding>
-                     <styleClass>
-                        <String fx:value="label" />
-                        <String fx:value="label" />
-                     </styleClass>
                      <opaqueInsets>
                         <Insets left="10.0" />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="lblImprimir" layoutX="4.0" layoutY="248.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="132.0" text="➪ Impressão" textFill="WHITE">
+                  <Label fx:id="lblImprimir" layoutX="1.0" layoutY="243.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="132.0" styleClass="label-hover" stylesheets="@swing.css" text="➪ Impressão" textFill="WHITE">
                      <font>
                         <Font name="SansSerif Bold" size="18.0" />
                      </font>
@@ -74,7 +69,7 @@
                   </Label>
                </children>
             </Pane>
-            <Label fx:id="lblRemover" layoutX="9.0" layoutY="207.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="118.0" text="➪ Remoção" textFill="WHITE">
+            <Label fx:id="lblRemover" layoutX="9.0" layoutY="207.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="23.0" prefWidth="118.0" styleClass="label-hover" stylesheets="@swing.css" text="➪ Remoção" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="18.0" />
                </font>
@@ -85,7 +80,7 @@
                   <Insets left="10.0" />
                </opaqueInsets>
             </Label>
-            <Label fx:id="lblBuscar" layoutX="10.0" layoutY="269.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="21.0" prefWidth="110.0" text="➪ Busca" textFill="WHITE">
+            <Label fx:id="lblBuscar" layoutX="10.0" layoutY="269.0" onMouseClicked="#telaClicada" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="21.0" prefWidth="110.0" styleClass="label-hover" stylesheets="@swing.css" text="➪ Busca" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="18.0" />
                </font>
@@ -96,7 +91,7 @@
                   <Insets left="10.0" />
                </opaqueInsets>
             </Label>
-            <Label fx:id="lblSair" layoutX="10.0" layoutY="429.0" onMouseClicked="#sair" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="21.0" prefWidth="70.0" text="➪ Sair" textFill="WHITE">
+            <Label fx:id="lblSair" layoutX="10.0" layoutY="429.0" onMouseClicked="#sair" onMousePressed="#labelMousePressed" onMouseReleased="#labelMouseReleased" prefHeight="21.0" prefWidth="70.0" styleClass="label-hover" stylesheets="@swing.css" text="➪ Sair" textFill="WHITE">
                <padding>
                   <Insets left="10.0" />
                </padding>
@@ -111,74 +106,75 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="inserirPanel" layoutX="173.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
+      <Pane fx:id="inserirPanel" layoutX="173.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #3448a5; -fx-background-radius: 10; -fx-border-color: #ff7b0e; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
             <TextField fx:id="txtNota2" layoutX="59.0" layoutY="260.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="328.0" layoutY="241.0" text="Terceira nota:">
+            <Label layoutX="328.0" layoutY="241.0" text="Terceira nota:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtNota3" layoutX="328.0" layoutY="260.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="59.0" layoutY="241.0" text="Segunda nota:">
+            <Label layoutX="59.0" layoutY="241.0" text="Segunda nota:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnInserir" layoutX="439.0" layoutY="322.0" mnemonicParsing="false" onAction="#inserirAluno" text="INSERIR" />
+            <Button fx:id="btnInserir" layoutX="394.0" layoutY="322.0" mnemonicParsing="false" onAction="#inserirAluno" styleClass="btnInicio" stylesheets="@swing.css" text="INSERIR" />
             <TextField fx:id="txtFaltas" layoutX="60.0" layoutY="168.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="329.0" layoutY="149.0" text="Primeira nota:">
+            <Label layoutX="329.0" layoutY="149.0" text="Primeira nota:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtNota1" layoutX="329.0" layoutY="168.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="60.0" layoutY="149.0" text="Número de faltas:">
+            <Label layoutX="60.0" layoutY="149.0" text="Número de faltas:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtMatricula" layoutX="61.0" layoutY="76.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="330.0" layoutY="57.0" text="Nome:">
+            <Label layoutX="330.0" layoutY="57.0" text="Nome:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
             <TextField fx:id="txtNome" layoutX="330.0" layoutY="76.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="61.0" layoutY="57.0" text="Matrícula:">
+            <Label layoutX="61.0" layoutY="57.0" text="Matrícula:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="removerPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
+      <Pane fx:id="removerPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #3448a5; -fx-background-radius: 10; -fx-border-color: #ff7b0e; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <Button fx:id="btnRemover" layoutX="470.0" layoutY="335.0" mnemonicParsing="false" onAction="#removerAluno" text="REMOVER" />
+            <Button fx:id="btnRemover" layoutX="423.0" layoutY="335.0" mnemonicParsing="false" onAction="#removerAluno" styleClass="btnInicio" stylesheets="@swing.css" text="REMOVER" />
             <TableView fx:id="tableRemoverAluno" layoutX="28.0" layoutY="72.0" prefHeight="244.0" prefWidth="512.0" />
             <TextField fx:id="txtMatriculaRemover" layoutX="29.0" layoutY="35.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:">
+            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
+            <Button fx:id="btnRemover2" layoutX="294.0" layoutY="335.0" mnemonicParsing="false" onAction="#imprimirAlunos2" styleClass="btnInicio" stylesheets="@swing.css" text="IMPRIMIR" />
          </children>
       </Pane>
-      <Pane fx:id="buscaPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
+      <Pane fx:id="buscaPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #3448a5; -fx-background-radius: 10; -fx-border-color: #ff7b0e; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <Button fx:id="btnBuscar" layoutX="470.0" layoutY="335.0" mnemonicParsing="false" onAction="#buscarAluno" prefHeight="25.0" prefWidth="70.0" text="BUSCAR" />
+            <Button fx:id="btnBuscar" layoutX="430.0" layoutY="331.0" mnemonicParsing="false" onAction="#buscarAluno" prefHeight="32.0" prefWidth="110.0" styleClass="btnInicio" stylesheets="@swing.css" text="BUSCAR" />
             <TableView fx:id="tableBuscarAluno" layoutX="28.0" layoutY="72.0" prefHeight="244.0" prefWidth="512.0" />
             <TextField fx:id="txtMatriculaBusca" layoutX="29.0" layoutY="35.0" prefHeight="25.0" prefWidth="169.0" />
-            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:">
+            <Label layoutX="29.0" layoutY="16.0" text="Matrícula:" textFill="WHITE">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="imprimirPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #ff7b0e; -fx-background-radius: 10; -fx-border-color: #28387f; -fx-border-width: 5; -fx-border-radius: 3;">
+      <Pane fx:id="imprimirPanel" layoutX="172.0" layoutY="89.0" prefHeight="384.0" prefWidth="565.0" style="-fx-background-color: #3448a5; -fx-background-radius: 10; -fx-border-color: #ff7b0e; -fx-border-width: 5; -fx-border-radius: 3;" visible="false">
          <children>
-            <Button fx:id="btnImprimir" layoutX="476.0" layoutY="335.0" mnemonicParsing="false" onAction="#imprimirAlunos" text="IMPRIMIR" />
+            <Button fx:id="btnImprimir" layoutX="434.0" layoutY="332.0" mnemonicParsing="false" onAction="#imprimirAlunos" styleClass="btnInicio" stylesheets="@swing.css" text="IMPRIMIR" />
             <TableView fx:id="tableImprimirAluno" layoutX="18.0" layoutY="24.0" prefHeight="292.0" prefWidth="527.0" />
          </children>
       </Pane>

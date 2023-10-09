@@ -21,3 +21,7 @@
 .btnInicio:pressed {
     -fx-translate-y: 1px;
 }
+
+.label-hover:hover {
+    -fx-text-fill: linear-gradient(to bottom, #2ad6e3, #5effff);
+}

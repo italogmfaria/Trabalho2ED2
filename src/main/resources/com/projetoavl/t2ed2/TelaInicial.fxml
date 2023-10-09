@@ -8,8 +8,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3449a6;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="telaInicial" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3449a6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetoavl.t2ed2.controller.TelaInicialController">
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #27387e; -fx-border-width: 5;">
          <children>
@@ -20,7 +19,7 @@
                         <Font name="Yu Gothic Medium" size="36.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endY="1.0">
+                        <LinearGradient endX="0.08530805687203792" endY="1.0" startX="0.08530805687203792" startY="0.22748815165876776">
                            <stops>
                               <Stop>
                                  <color>
@@ -42,12 +41,12 @@
                <children>
                   <Pane layoutX="2.0" layoutY="3.0" prefHeight="94.0" prefWidth="278.0" style="-fx-background-color: #3240a9; -fx-background-radius: 6; -fx-border-radius: 5; -fx-border-width: 3;">
                      <children>
-                        <Button layoutX="155.0" layoutY="27.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="btnInicio" stylesheets="@swing.css" text="SAIR">
+                        <Button layoutX="155.0" layoutY="27.0" mnemonicParsing="false" onAction="#fechaTela" prefHeight="40.0" prefWidth="102.0" styleClass="btnInicio" stylesheets="@swing.css" text="SAIR">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button layoutX="22.0" layoutY="27.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="108.0" styleClass="btnInicio" stylesheets="@swing.css" text="ENTRAR">
+                        <Button layoutX="22.0" layoutY="27.0" mnemonicParsing="false" onAction="#abreTela" prefHeight="40.0" prefWidth="108.0" styleClass="btnInicio" stylesheets="@swing.css" text="ENTRAR">
                            <font>
                               <Font name="Yu Gothic Medium" size="12.0" />
                            </font>
